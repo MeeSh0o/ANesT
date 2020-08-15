@@ -17,14 +17,14 @@ public class Dialog : MonoBehaviour
     }
 
     public IEnumerator ShowMessage(
-        GameObject go,
+        GameObject skipBord,
         Text label,
         string message,
         float speed = 0.05f
     )
     {
         bool skip = false;
-        go.AddOnPointerClick(e => skip = true);
+        skipBord.AddOnPointerClick(e => skip = true);
         StringBuilder typed = new StringBuilder();
         for (var i = 0; i < message.Length; i++)
         {
