@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using ByteSheep.Events;
 using UnityEngine;
 
 [Serializable]
@@ -7,11 +9,18 @@ public class Trigger
 {
     public TriggerType triggerType = TriggerType.None;
     [NonSerialized] public int currentTriggerTimes = 0;
-    [Tooltip("表示可以触发多少次,负数为无限次")] public int triggerTimes = 1;
-    [Tooltip("触发目标,对话/打开对象")] public string triggerTarget;
-    [Tooltip("游戏中的flag,收集完成即可过关")] public string flag;
-    [Tooltip("需要对应的flag")] public string[] NeedFlags = new string[] { };
-    [Tooltip("不能有的Flag")] public string[] WithOutFlags = new string[] { };
+    [Header("表示可以触发多少次,负数为无限次")] public int triggerTimes = 1;
+    [Header("触发目标,对话/打开对象")] public string triggerTarget;
+    [Header("游戏中的flag,收集完成即可过关")] public string flag;
+    [Header("需要对应的flag")] public string[] NeedFlags = new string[] { };
+    [Header("不能有的Flag")] public string[] WithOutFlags = new string[] { };
+
+    [Header("监听操作，当都返回ture则继续往下走")]
+    public List<TriggerListener> TriggerListeners;
+
+    [SerializeField]
+    [Header("当触发成功")]
+    public QuickEvent OnSuccessTrigger;
 
     public void DoTrigger(ClickableItem item)
     {
@@ -34,18 +43,27 @@ public class Trigger
         }
 
         currentTriggerTimes++;
-        var listener = item.GetComponent<TriggerListener>();
-        if (listener != null && listener.OnTrigger(this))
+        //这里把监听器作为一个额外的判断条件或者功能
+        foreach (var listener in TriggerListeners)
         {
-            return;
+            if (listener != null && !listener.OnTrigger(this))
+            {
+                return;
+            }
         }
 
+        DoTriggerEffect(item);
+    }
+
+    public void DoTriggerEffect(ClickableItem item)
+    {
         switch (triggerType)
         {
             case TriggerType.PickUp:
                 //拾取
                 Inventory.Instance.AddItem(item);
                 break;
+
             case TriggerType.Dialog:
                 //对话
                 switch (triggerTarget)
@@ -61,16 +79,13 @@ public class Trigger
                 }
 
                 break;
+
             case TriggerType.Open:
-                //打开啥
-                switch (triggerTarget)
-                {
-                    case "触发.抽屉小游戏":
-                        CloseUpView.Instance.OpenMiniGame(CloseUpView.MINI_GAME_DRAWER);
-                        break;
-                }
+                //打开游戏
+                CloseUpView.Instance.OpenMiniGame(triggerTarget);
 
                 break;
+
             case TriggerType.None:
 
                 if (!string.IsNullOrEmpty(flag))
@@ -80,5 +95,6 @@ public class Trigger
 
                 break;
         }
+        OnSuccessTrigger?.Invoke();
     }
 }

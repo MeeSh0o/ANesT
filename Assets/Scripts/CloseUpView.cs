@@ -5,17 +5,20 @@ using UnityEngine.UI;
 
 public class CloseUpView : MonoBehaviour
 {
-    public const string MINI_GAME_DRAWER = "抽屉小游戏";
-
-    private Dictionary<string, MiniGame> miniGames = new Dictionary<string, MiniGame>();
+    // private Dictionary<string, MiniGame> miniGames = new Dictionary<string, MiniGame>();
 
     // Start is called before the first frame update
     public Image viewImage;
 
-    void Start()
+    private void Start()
     {
+        var games = GetComponentsInChildren<MiniGame>();
+        foreach (var miniGame in games)
+        {
+            miniGame.Init(this);
+        }
+
         Instance = this;
-        miniGames.Add(MINI_GAME_DRAWER, GetComponentInChildren<DrawerMiniGame>().Init(this));
         Hide();
     }
 
@@ -36,13 +39,16 @@ public class CloseUpView : MonoBehaviour
 
     public void OpenMiniGame(string name)
     {
-        if (!miniGames.ContainsKey(name))
+        var games = GetComponentsInChildren<MiniGame>(true);
+        foreach (var miniGame in games)
         {
-            return;
+            if (miniGame.GameName == name)
+            {
+                Show();
+                miniGame.Show();
+                break;
+            }
         }
-
-        Show();
-        miniGames[MINI_GAME_DRAWER].Show();
     }
 
     public static CloseUpView Instance { get; private set; }

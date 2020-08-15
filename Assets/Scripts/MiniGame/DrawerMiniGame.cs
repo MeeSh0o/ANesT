@@ -18,17 +18,17 @@ public class DrawerMiniGame : MiniGame
     private bool broadCast = false;
     private CloseUpView view;
 
-    void Start()
+    private void Start()
     {
         //下标都从1开始
-        highlights.Add(new[] {0});
+        highlights.Add(new[] { 0 });
 
-        highlights.Add(new[] {1, 3, 5});
-        highlights.Add(new[] {2, 3, 5});
-        highlights.Add(new[] {3, 4, 5});
-        highlights.Add(new[] {2, 3, 5, 6});
-        highlights.Add(new[] {1, 3, 4, 5});
-        highlights.Add(new[] {1, 2, 4, 6});
+        highlights.Add(new[] { 1, 3, 5 });
+        highlights.Add(new[] { 2, 3, 5 });
+        highlights.Add(new[] { 3, 4, 5 });
+        highlights.Add(new[] { 2, 3, 5, 6 });
+        highlights.Add(new[] { 1, 3, 4, 5 });
+        highlights.Add(new[] { 1, 2, 4, 6 });
         for (int i = 1; i <= 6; i++)
         {
             var go = Instantiate(numberPrefab, layout.transform);
@@ -47,12 +47,11 @@ public class DrawerMiniGame : MiniGame
         });
     }
 
-    public MiniGame Init(CloseUpView view)
+    public override MiniGame Init(CloseUpView view)
     {
         this.view = view;
         return this;
     }
-
 
     public bool IsAllToggleOn()
     {
@@ -83,16 +82,10 @@ public class DrawerMiniGame : MiniGame
             }
         }
 
-
         broadCast = false;
         if (IsAllToggleOn())
         {
-            //TODO:完成关卡UI
-            Stage.Instance.AddFlag("抽屉小游戏.完成");
-            Stage.Instance.AddFlag("画笔");
-
-            Inventory.Instance.AddItem(
-                new Item() {name = "画笔", sprite = Resources.Load<Sprite>("Sprites/Daoju/1huabii")});
+            OnSuccessGame();
         }
     }
 }

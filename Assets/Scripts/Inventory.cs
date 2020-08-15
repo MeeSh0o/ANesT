@@ -22,7 +22,7 @@ public class Inventory : MonoBehaviour
         Instance = this;
     }
 
-    void Start()
+    private void Start()
     {
         showPos = transform.localPosition;
         hidePos = transform.localPosition + new Vector3(200, 0, 0);
@@ -55,18 +55,18 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ClickableItem citem, bool anim = true)
     {
-        citem.transform.DOComplete(false);
+        citem.transform.DOComplete();
         var rawItem = citem.item;
         if (anim)
         {
             var item = Render(rawItem);
             item.Hide();
             citem.GetComponent<MaskableGraphic>().DOFade(0, 0.05f).SetDelay(0.20f);
-            citem.transform.DOMove(item.transform.position, 0.3f).onComplete = () =>
-            {
-                item.Show();
-                citem.Hide();
-            };
+            citem.transform.DOMove(item.transform.position, 0.3f).OnComplete(() =>
+          {
+              item.Show();
+              citem.Hide();
+          });
         }
         else
         {

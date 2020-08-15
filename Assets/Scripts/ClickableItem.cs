@@ -13,7 +13,11 @@ public class ClickableItem : MonoBehaviour
     public Dialog girlBalloon;
     public Trigger[] triggers = new Trigger[] { };
 
-    void Start()
+    [SerializeField]
+    [Header("如果需要特写")]
+    public Sprite DetailSprite;
+
+    private void Start()
     {
         var graphic = GetComponent<MaskableGraphic>();
         if (graphic)
@@ -22,14 +26,21 @@ public class ClickableItem : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
+        //这里用Click防止突然闪现出现按钮被秒点
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
         }
-
-        Trigger();
+        if (DetailSprite != null)
+        {
+            ShowDetailFrame.Instance.ShowImage(DetailSprite, Trigger);
+        }
+        else
+        {
+            Trigger();
+        }
     }
 
     private void Trigger()
