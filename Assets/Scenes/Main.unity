@@ -1090,6 +1090,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4329312073579419061, guid: ed30c612c2a3d1240ad6c314fe212114,
+        type: 3}
+      propertyPath: needItems.Array.data[1]
+      value: "\u8C03\u8272\u76D8"
+      objectReference: {fileID: 0}
     - target: {fileID: 7557745946391051780, guid: ed30c612c2a3d1240ad6c314fe212114,
         type: 3}
       propertyPath: girlBalloon
