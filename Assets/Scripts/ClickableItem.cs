@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class ClickableItem : MonoBehaviour
 
     public Dialog girlBalloon;
     [Tooltip("游戏中的flag,收集完成即可过关")] public string flag;
+    [Tooltip("需要对应的flag")] public string[] NeedFlags = new string[] { };
 
     void Start()
     {
@@ -47,6 +49,12 @@ public class ClickableItem : MonoBehaviour
             return;
         }
 
+        if (!NeedFlags.All(f => Stage.Instance.HasFlag(f)))
+        {
+            Debug.Log("缺少前置条件");
+            return;
+        }
+
         currentTriggerTimes++;
         switch (triggerType)
         {
@@ -58,15 +66,27 @@ public class ClickableItem : MonoBehaviour
                 //对话
                 switch (triggerTarget)
                 {
-                    case "一幅彩色的画":
+                    case "对话.一幅彩色的画":
                         girlBalloon.ShowMessage("一幅彩色的画");
                         break;
                 }
 
-                Stage.Instance.AddFlag(flag);
+                if (!string.IsNullOrEmpty(flag))
+                {
+                    Stage.Instance.AddFlag(flag);
+                }
+
                 break;
             case TriggerType.Open:
                 //打开啥
+                switch (triggerTarget)
+                {
+                    case "触发.抽屉小游戏":
+                        CloseUpView.Instance.OpenMiniGame(CloseUpView.MINI_GAME_DRAWER);
+                        Debug.Log("大有份大奖啦");
+                        break;
+                }
+
                 break;
         }
     }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// <summary>
 /// 打开抽屉解密小游戏
 /// </summary>
-public class DrawerMiniGame : MonoBehaviour
+public class DrawerMiniGame : MiniGame
 {
 
     public GameObject numberPrefab;
@@ -40,15 +40,6 @@ public class DrawerMiniGame : MonoBehaviour
         closeGo.AddOnPointerClick((e) => Hide());
     }
 
-    private void Hide()
-    {
-        gameObject.SetActive(false);
-    }
-
-    public void Show()
-    {
-        gameObject.SetActive(true);
-    }
 
     public bool IsAllToggleOn()
     {
