@@ -1021,6 +1021,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rucong
       objectReference: {fileID: 0}
+    - target: {fileID: 2640917572654847855, guid: 275767c4fa8928b42af81eb1d030302e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6617411327200784146, guid: 275767c4fa8928b42af81eb1d030302e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1085,6 +1090,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4329312073579419061, guid: ed30c612c2a3d1240ad6c314fe212114,
+        type: 3}
+      propertyPath: needItems.Array.data[1]
+      value: "\u8C03\u8272\u76D8"
+      objectReference: {fileID: 0}
     - target: {fileID: 7557745946391051780, guid: ed30c612c2a3d1240ad6c314fe212114,
         type: 3}
       propertyPath: girlBalloon
@@ -1094,11 +1104,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Levels
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557745946654373632, guid: ed30c612c2a3d1240ad6c314fe212114,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7557745946654373638, guid: ed30c612c2a3d1240ad6c314fe212114,
         type: 3}
