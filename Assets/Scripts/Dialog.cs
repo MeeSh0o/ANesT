@@ -10,21 +10,27 @@ public class Dialog : MonoBehaviour
 {
     public GameObject skipBordGo;
     public Text messageText;
-    [NonSerialized] public bool autoHide = true;
 
     private void Awake()
     {
         Hide();
     }
 
-    public void ShowMessage(string message, float speed = 0.05f)
+    public void ShowMessage(string message)
     {
-        Show();
-        StartCoroutine(_ShowMessage(message, speed));
+        ShowMessage(message, 0.05f, true);
     }
 
-    private IEnumerator _ShowMessage(string message, float speed = 0.05f)
+    public void ShowMessage(string message, float speed, bool autoHide)
     {
+        Show();
+        StartCoroutine(_ShowMessage(message, speed, autoHide));
+    }
+
+    private IEnumerator _ShowMessage(string message, float speed = 0.05f, bool autoHide = true)
+    {
+        messageText.text = string.Empty;
+        yield return new WaitForSeconds(0.1f);
         bool skip = false;
         var entry = skipBordGo.AddOnPointerClick(e => skip = true);
         StringBuilder typed = new StringBuilder();
@@ -47,6 +53,7 @@ public class Dialog : MonoBehaviour
             yield return null;
         }
 
+        Debug.Log("Hide");
         if (autoHide) Hide();
         skipBordGo.RemoveEventEntry(entry);
     }

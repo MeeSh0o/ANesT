@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ClickableItem : MonoBehaviour
 {
@@ -16,13 +18,28 @@ public class ClickableItem : MonoBehaviour
     private int currentTriggerTimes = 0;
 
     public Dialog girlBalloon;
+    [Tooltip("游戏中的flag,收集完成即可过关")] public string flag;
 
     void Start()
     {
-        gameObject.AddOnPointerClick(OnClick);
+        var graphic = GetComponent<MaskableGraphic>();
+        if (graphic)
+        {
+            gameObject.AddOnPointerClick((e) => Trigger());
+        }
     }
 
-    private void OnClick(BaseEventData arg0)
+    private void OnMouseDown()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        Trigger();
+    }
+
+    private void Trigger()
     {
         if (triggerTimes >= 0 && currentTriggerTimes >= triggerTimes)
         {
@@ -41,16 +58,22 @@ public class ClickableItem : MonoBehaviour
                 //对话
                 switch (triggerTarget)
                 {
-                    case "小女孩":
-                        girlBalloon.ShowMessage("发放的解放军的卡死了福建大卡拉屎福建大卡生姜可乐");
+                    case "一幅彩色的画":
+                        girlBalloon.ShowMessage("一幅彩色的画");
                         break;
                 }
 
+                Stage.Instance.AddFlag(flag);
                 break;
             case TriggerType.Open:
                 //打开啥
                 break;
         }
+    }
+
+    private void OnClick(BaseEventData arg0)
+    {
+        Trigger();
     }
 
     public void Hide()
