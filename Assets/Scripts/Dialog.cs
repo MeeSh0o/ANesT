@@ -6,39 +6,33 @@ using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject skipBordGo;
+    public Text messageText;
+
+    public void ShowMessage(string message, float speed = 0.05f)
     {
+        StartCoroutine(_ShowMessage(message, speed));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
-    public IEnumerator ShowMessage(
-        GameObject skipBord,
-        Text label,
-        string message,
-        float speed = 0.05f
-    )
+    private IEnumerator _ShowMessage(string message, float speed = 0.05f)
     {
         bool skip = false;
-        skipBord.AddOnPointerClick(e => skip = true);
+        skipBordGo.AddOnPointerClick(e => skip = true);
         StringBuilder typed = new StringBuilder();
         for (var i = 0; i < message.Length; i++)
         {
             char ch = message[i];
             typed.Append(ch);
-            label.text = typed.ToString();
+            messageText.text = typed.ToString();
             if (skip)
             {
                 break;
             }
+
             yield return new WaitForSeconds(speed);
         }
 
-        label.text = message;
+        messageText.text = message;
         while (!skip)
         {
             yield return null;
