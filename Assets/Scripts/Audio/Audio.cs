@@ -105,6 +105,23 @@ public class Audio : MonoBehaviour
         }
     }
     /// <summary>
+    /// 让目标播放音效，放完对象就销毁
+    /// </summary>
+    /// <param name="fileName">音频文件名</param>
+    /// <param name="Volume">音量</param>
+    /// <param name="trans">想要播放音效的物体</param>
+    public void PlaySFX(string fileName, float volume, Transform trans)
+    {
+        AudioClip clip = GetAudioClip(fileName);
+        if (clip != null)
+        {
+            Clip clipObject = Instantiate(clipPrefab, trans).GetComponent<Clip>();
+            clipObject.name = "SFX" + fileName;
+            clipObject.SetPlayer(false);
+            clipObject.Play(clip, volume);
+        }
+    }
+    /// <summary>
     /// 静音指定轨道
     /// </summary>
     /// <param name="chanel">轨道</param>
