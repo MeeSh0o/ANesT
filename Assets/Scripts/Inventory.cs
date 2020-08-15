@@ -55,10 +55,10 @@ public class Inventory : MonoBehaviour
     public void AddItem(ClickableItem citem, bool anim = true)
     {
         citem.transform.DOComplete(false);
-
+        var rawItem = citem.item;
         if (anim)
         {
-            var item = Render(citem);
+            var item = Render(rawItem);
             item.Hide();
             citem.GetComponent<MaskableGraphic>().DOFade(0, 0.05f).SetDelay(0.20f);
             citem.transform.DOMove(item.transform.position, 0.3f).onComplete = () =>
@@ -69,16 +69,21 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            Render(citem);
+            Render(rawItem);
         }
     }
 
-    private InventoryItem Render(ClickableItem citem)
+    public void AddItem(Item item)
+    {
+        Render(item);
+    }
+
+    private InventoryItem Render(Item rawItem)
     {
         var go = Instantiate(itemPrefab, layout.transform);
         go.SetActive(true);
         var item = go.GetComponent<InventoryItem>();
-        item.Set(citem);
+        item.Set(rawItem);
         items.Add(item);
         return item;
     }

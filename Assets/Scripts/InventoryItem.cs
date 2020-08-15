@@ -9,15 +9,15 @@ public class InventoryItem : MonoBehaviour
 {
     public Text nameText;
     public Image iconImage;
-    [NonSerialized] public ClickableItem citem;
+    [NonSerialized] public Item rawItem;
 
     void Start()
     {
     }
 
-    public void Set(ClickableItem item)
+    public void Set(Item item)
     {
-        this.citem = item;
+        this.rawItem = item;
         this.nameText.text = item.name;
         this.iconImage.sprite = item.sprite;
     }

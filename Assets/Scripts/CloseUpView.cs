@@ -15,7 +15,7 @@ public class CloseUpView : MonoBehaviour
     void Start()
     {
         Instance = this;
-        miniGames.Add(MINI_GAME_DRAWER, GetComponentInChildren<DrawerMiniGame>());
+        miniGames.Add(MINI_GAME_DRAWER, GetComponentInChildren<DrawerMiniGame>().Init(this));
         Hide();
     }
 

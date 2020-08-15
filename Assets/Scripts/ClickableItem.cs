@@ -8,9 +8,7 @@ using UnityEngine.UI;
 
 public class ClickableItem : MonoBehaviour
 {
-    public string name;
-    public Sprite sprite;
-    public string desc;
+    [SerializeField] public Item item;
     public TriggerType triggerType = TriggerType.PickUp;
     [Tooltip("表示可以触发多少次,负数为无限次")] public int triggerTimes = 1;
 
@@ -21,6 +19,7 @@ public class ClickableItem : MonoBehaviour
     public Dialog girlBalloon;
     [Tooltip("游戏中的flag,收集完成即可过关")] public string flag;
     [Tooltip("需要对应的flag")] public string[] NeedFlags = new string[] { };
+    [Tooltip("不能有的Flag")] public string[] WithOutFlags = new string[] { };
 
     void Start()
     {
@@ -55,6 +54,12 @@ public class ClickableItem : MonoBehaviour
             return;
         }
 
+        if (WithOutFlags.Any(f => Stage.Instance.HasFlag(f)))
+        {
+            Debug.Log("含有不能有的flag");
+            return;
+        }
+
         currentTriggerTimes++;
         switch (triggerType)
         {
@@ -83,7 +88,6 @@ public class ClickableItem : MonoBehaviour
                 {
                     case "触发.抽屉小游戏":
                         CloseUpView.Instance.OpenMiniGame(CloseUpView.MINI_GAME_DRAWER);
-                        Debug.Log("大有份大奖啦");
                         break;
                 }
 
