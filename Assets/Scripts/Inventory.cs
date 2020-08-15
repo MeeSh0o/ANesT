@@ -56,10 +56,10 @@ public class Inventory : MonoBehaviour
             item.Hide();
             citem.GetComponent<MaskableGraphic>().DOFade(0, 0.05f).SetDelay(0.20f);
             citem.transform.DOMove(item.transform.position, 0.3f).onComplete = () =>
-            {
-                item.Show();
-                citem.Hide();
-            };
+                          {
+                              item.Show();
+                              citem.Hide();
+                          };
         }
         else
         {
