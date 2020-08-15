@@ -12,14 +12,19 @@ public class Dialog : MonoBehaviour
     public Text messageText;
     [NonSerialized] public bool autoHide = true;
 
+    private void Awake()
+    {
+        Hide();
+    }
+
     public void ShowMessage(string message, float speed = 0.05f)
     {
+        Show();
         StartCoroutine(_ShowMessage(message, speed));
     }
 
     private IEnumerator _ShowMessage(string message, float speed = 0.05f)
     {
-        Show();
         bool skip = false;
         var entry = skipBordGo.AddOnPointerClick(e => skip = true);
         StringBuilder typed = new StringBuilder();
