@@ -34,6 +34,12 @@ public class Trigger
         }
 
         currentTriggerTimes++;
+        var listener = item.GetComponent<TriggerListener>();
+        if (listener != null && listener.OnTrigger(this))
+        {
+            return;
+        }
+
         switch (triggerType)
         {
             case TriggerType.PickUp:
@@ -66,7 +72,7 @@ public class Trigger
 
                 break;
             case TriggerType.None:
-                
+
                 if (!string.IsNullOrEmpty(flag))
                 {
                     Stage.Instance.AddFlag(flag);
