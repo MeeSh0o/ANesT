@@ -944,12 +944,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7557745945838729709, guid: ed30c612c2a3d1240ad6c314fe212114,
-        type: 3}
-      propertyPath: item.sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: dde64140423a4b44eb3e21fc5cf65a09,
-        type: 3}
     - target: {fileID: 7557745946391051780, guid: ed30c612c2a3d1240ad6c314fe212114,
         type: 3}
       propertyPath: girlBalloon

@@ -81,6 +81,96 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3919537346925973639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4850667661036809357}
+  - component: {fileID: 2583160053697221162}
+  - component: {fileID: 7557745945696348461}
+  m_Layer: 5
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4850667661036809357
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919537346925973639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7557745946720427152}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.771, y: 2.801}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!60 &2583160053697221162
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919537346925973639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.43182123, y: 1.1727285}
+      - {x: -0.4093175, y: 1.1491048}
+      - {x: -0.43075943, y: -0.28298092}
+      - {x: 0.5406774, y: -0.22017026}
+--- !u!114 &7557745945696348461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919537346925973639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f11db5de3fe9dd46a55647b948cc58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    name: "\u753B\u677F"
+    sprite: {fileID: 0}
+    desc: 
+  girlBalloon: {fileID: 0}
+  triggers:
+  - triggerType: 0
+    triggerTimes: 1
+    triggerTarget: 
+    flag: "\u5B8C\u6210\u4E0A\u8272"
+    NeedFlags: []
+    WithOutFlags: []
 --- !u!1 &4290993706489521827
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,16 +379,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     name: "\u8C03\u8272\u76D8"
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: dde64140423a4b44eb3e21fc5cf65a09, type: 3}
     desc: 
-  triggerType: 0
-  triggerTimes: 1
-  triggerTarget: 
   girlBalloon: {fileID: 0}
-  flag: 
-  NeedFlags:
-  - "\u62BD\u5C49\u5C0F\u6E38\u620F.\u5B8C\u6210"
-  WithOutFlags: []
+  triggers:
+  - triggerType: 1
+    triggerTimes: 1
+    triggerTarget: 
+    flag: 
+    NeedFlags:
+    - "\u62BD\u5C49\u5C0F\u6E38\u620F.\u5B8C\u6210"
+    WithOutFlags: []
 --- !u!1 &7557745945846168108
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,14 +473,15 @@ MonoBehaviour:
     name: "\u62BD\u5C49"
     sprite: {fileID: 0}
     desc: "\u6253\u5F00\u62BD\u5C49"
-  triggerType: 2
-  triggerTimes: -1
-  triggerTarget: "\u89E6\u53D1.\u62BD\u5C49\u5C0F\u6E38\u620F"
   girlBalloon: {fileID: 0}
-  flag: 
-  NeedFlags: []
-  WithOutFlags:
-  - "\u753B\u7B14"
+  triggers:
+  - triggerType: 3
+    triggerTimes: -1
+    triggerTarget: "\u89E6\u53D1.\u62BD\u5C49\u5C0F\u6E38\u620F"
+    flag: 
+    NeedFlags: []
+    WithOutFlags:
+    - "\u753B\u7B14"
 --- !u!1 &7557745946391051783
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,13 +571,22 @@ MonoBehaviour:
     name: "\u5C0F\u5973\u5B69"
     sprite: {fileID: 0}
     desc: "\u5C0F\u5973\u5B69"
-  triggerType: 1
-  triggerTimes: -1
-  triggerTarget: "\u5BF9\u8BDD.\u4E00\u5E45\u5F69\u8272\u7684\u753B"
   girlBalloon: {fileID: 0}
-  flag: "\u5BF9\u8BDD.\u4E00\u5E45\u5F69\u8272\u7684\u753B"
-  NeedFlags: []
-  WithOutFlags: []
+  triggers:
+  - triggerType: 2
+    triggerTimes: -1
+    triggerTarget: "\u5BF9\u8BDD.\u4E00\u5E45\u5F69\u8272\u7684\u753B"
+    flag: "\u5BF9\u8BDD.\u4E00\u5E45\u5F69\u8272\u7684\u753B"
+    NeedFlags: []
+    WithOutFlags:
+    - "\u5B8C\u6210\u4E0A\u8272"
+  - triggerType: 2
+    triggerTimes: -1
+    triggerTarget: "\u5BF9\u8BDD.\u7B2C\u4E00\u5173\u5B8C\u6210"
+    flag: "\u5BF9\u8BDD.\u7B2C\u4E00\u5173\u5B8C\u6210"
+    NeedFlags:
+    - "\u5B8C\u6210\u4E0A\u8272"
+    WithOutFlags: []
 --- !u!1 &7557745946654373632
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +732,7 @@ RectTransform:
   - {fileID: 7557745946391051782}
   - {fileID: 7557745945846168099}
   - {fileID: 7557745945838729710}
+  - {fileID: 4850667661036809357}
   m_Father: {fileID: 7557745946654373638}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

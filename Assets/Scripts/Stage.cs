@@ -53,6 +53,13 @@ public class Stage : MonoBehaviour
         }
 
         flags.Add(flag);
+
+        switch (flag)
+        {
+            case "对话.第一关完成":
+                Narratage.Instance.ShowMessage("第一关完成", () => { Debug.Log("加载第二关"); }, 0.05f, false);
+                break;
+        }
     }
 
     public bool HasFlag(string flag)
