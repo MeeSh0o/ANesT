@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ByteSheep.Events;
 using UnityEngine;
 
 public class MiniGame : MonoBehaviour
@@ -11,6 +12,9 @@ public class MiniGame : MonoBehaviour
 
     [Header("成功时的道具")]
     public List<Item> SuccessItems;
+
+    [Header("成功时的事件")]
+    public QuickEvent SuccessEvent;
 
     private bool _success = false;
 
@@ -46,6 +50,8 @@ public class MiniGame : MonoBehaviour
             {
                 Inventory.Instance.AddItem(SuccessItems[i]);
             }
+
+            SuccessEvent?.Invoke();
         }
     }
 }

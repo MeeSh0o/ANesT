@@ -21,7 +21,7 @@ public class MoveRotateHelper : MonoBehaviour
 
         if (deta.sqrMagnitude > 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(deta.y, deta.x) * Mathf.Rad2Deg + 90f);
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(deta.y, deta.x) * Mathf.Rad2Deg);
         }
         _lastPosition = transform.position;
     }

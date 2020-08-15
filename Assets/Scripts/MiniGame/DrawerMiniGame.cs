@@ -43,7 +43,6 @@ public class DrawerMiniGame : MiniGame
         closeGo.AddOnPointerClick((e) =>
         {
             Hide();
-            view.Hide();
         });
     }
 
