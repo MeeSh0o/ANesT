@@ -1,13 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
     public GameObject skipBordGo;
     public Text messageText;
+    [NonSerialized] public bool autoHide = true;
 
     public void ShowMessage(string message, float speed = 0.05f)
     {
@@ -16,8 +19,9 @@ public class Dialog : MonoBehaviour
 
     private IEnumerator _ShowMessage(string message, float speed = 0.05f)
     {
+        Show();
         bool skip = false;
-        skipBordGo.AddOnPointerClick(e => skip = true);
+        var entry = skipBordGo.AddOnPointerClick(e => skip = true);
         StringBuilder typed = new StringBuilder();
         for (var i = 0; i < message.Length; i++)
         {
@@ -37,5 +41,18 @@ public class Dialog : MonoBehaviour
         {
             yield return null;
         }
+
+        if (autoHide) Hide();
+        skipBordGo.RemoveEventEntry(entry);
+    }
+
+    private void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }
