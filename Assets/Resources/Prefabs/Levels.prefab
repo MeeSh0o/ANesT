@@ -436,7 +436,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f317978e50d88d04c8aae49a21340bca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5bc8445e04169742b3b5adda4fba4eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -517,12 +517,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f317978e50d88d04c8aae49a21340bca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3c887398b2799f4fad0f41bffeb10e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.26, y: 10.2}
+  m_Size: {x: 11.72, y: 11.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 4850667661036809357}
   - component: {fileID: 2583160053697221162}
   - component: {fileID: 7557745945696348461}
+  - component: {fileID: 4329312073579419061}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -613,11 +614,24 @@ MonoBehaviour:
   girlBalloon: {fileID: 0}
   triggers:
   - triggerType: 0
-    triggerTimes: 1
+    triggerTimes: -1
     triggerTarget: 
-    flag: "\u5B8C\u6210\u4E0A\u8272"
+    flag: 
     NeedFlags: []
     WithOutFlags: []
+--- !u!114 &4329312073579419061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3919537346925973639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dde198cc5240d0bf6be2c208c46c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paint: {fileID: 7557745945696348462}
 --- !u!1 &4290993706489521827
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +702,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dde64140423a4b44eb3e21fc5cf65a09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ccca2956ef205642820b72e19487aa3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1175,7 +1189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     name: "\u8C03\u8272\u76D8"
-    sprite: {fileID: 21300000, guid: dde64140423a4b44eb3e21fc5cf65a09, type: 3}
+    sprite: {fileID: 21300000, guid: 8ccca2956ef205642820b72e19487aa3, type: 3}
     desc: 
   girlBalloon: {fileID: 0}
   triggers:

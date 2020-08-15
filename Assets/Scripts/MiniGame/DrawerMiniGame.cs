@@ -92,7 +92,7 @@ public class DrawerMiniGame : MiniGame
             Stage.Instance.AddFlag("画笔");
 
             Inventory.Instance.AddItem(
-                new Item() {name = "画笔", sprite = Resources.Load<Sprite>("Srites/Daoju/1huabii")});
+                new Item() {name = "画笔", sprite = Resources.Load<Sprite>("Sprites/Daoju/1huabii")});
         }
     }
 }
