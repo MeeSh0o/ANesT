@@ -10,20 +10,23 @@ using UnityEngine.UI;
 /// </summary>
 public class DrawerMiniGame : MiniGame
 {
-
     public GameObject numberPrefab;
     private Toggle[] numbers = new Toggle[7];
     private List<int[]> highlights = new List<int[]>();
     public GridLayoutGroup layout;
     public GameObject closeGo;
     private bool broadCast = false;
+    private CloseUpView view;
 
     void Start()
     {
+        //下标都从1开始
+        highlights.Add(new[] {0});
+
         highlights.Add(new[] {1, 3, 5});
         highlights.Add(new[] {2, 3, 5});
         highlights.Add(new[] {3, 4, 5});
-        highlights.Add(new[] {3, 4, 5, 6});
+        highlights.Add(new[] {2, 3, 5, 6});
         highlights.Add(new[] {1, 3, 4, 5});
         highlights.Add(new[] {1, 2, 4, 6});
         for (int i = 1; i <= 6; i++)
@@ -37,13 +40,23 @@ public class DrawerMiniGame : MiniGame
             toggle.onValueChanged.AddListener((v) => HandleNumber(v, num, toggle));
         }
 
-        closeGo.AddOnPointerClick((e) => Hide());
+        closeGo.AddOnPointerClick((e) =>
+        {
+            Hide();
+            view.Hide();
+        });
+    }
+
+    public MiniGame Init(CloseUpView view)
+    {
+        this.view = view;
+        return this;
     }
 
 
     public bool IsAllToggleOn()
     {
-        return numbers.All(t => t && t.isOn);
+        return numbers.Skip(1).All(t => t.isOn);
     }
 
     private void HandleNumber(bool value, int num, Toggle toggle)
@@ -57,23 +70,28 @@ public class DrawerMiniGame : MiniGame
 
         if (value)
         {
-            foreach (int n in highlights[num - 1])
+            foreach (int n in highlights[num])
             {
                 if (n == num)
                 {
                     continue;
                 }
 
-                numbers[n].isOn = !numbers[n].isOn;
+                // numbers[n].isOn = !numbers[n].isOn;
+                //不取反
+                numbers[n].isOn = true;
             }
         }
 
 
         broadCast = false;
-
         if (IsAllToggleOn())
         {
+            //TODO:完成关卡UI
             Stage.Instance.AddFlag("抽屉小游戏.完成");
+            Stage.Instance.AddFlag("画笔");
+
+            Inventory.Instance.AddItem(new Item() {name = "画笔"});
         }
     }
 }
