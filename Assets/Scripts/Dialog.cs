@@ -11,23 +11,23 @@ public class Dialog : MonoBehaviour
     public GameObject skipBordGo;
     public Text messageText;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         Hide();
     }
 
     public void ShowMessage(string message)
     {
-        ShowMessage(message, 0.05f, true);
+        ShowMessage(message, null, 0.05f, true);
     }
 
-    public void ShowMessage(string message, float speed, bool autoHide)
+    public void ShowMessage(string message, Action callback, float speed = 0.05f, bool autoHide = true)
     {
         Show();
-        StartCoroutine(_ShowMessage(message, speed, autoHide));
+        StartCoroutine(_ShowMessage(message, callback, speed, autoHide));
     }
 
-    private IEnumerator _ShowMessage(string message, float speed = 0.05f, bool autoHide = true)
+    private IEnumerator _ShowMessage(string message, Action callback, float speed = 0.05f, bool autoHide = true)
     {
         messageText.text = string.Empty;
         yield return new WaitForSeconds(0.1f);
@@ -56,6 +56,7 @@ public class Dialog : MonoBehaviour
         Debug.Log("Hide");
         if (autoHide) Hide();
         skipBordGo.RemoveEventEntry(entry);
+        callback?.Invoke();
     }
 
     private void Show()

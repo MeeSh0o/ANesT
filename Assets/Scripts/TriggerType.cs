@@ -1,5 +1,7 @@
 ﻿public enum TriggerType
 {
+    None,
+    
     /// <summary>
     /// 拾取
     /// </summary>
