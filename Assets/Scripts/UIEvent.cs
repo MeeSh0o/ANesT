@@ -33,10 +33,16 @@ public static class UIEvent
         return entry;
     }
 
-    public static void RemoveEventEntry(UnityEngine.GameObject go, EventTrigger.Entry entry)
+    public static void RemoveEventEntry(this UnityEngine.GameObject go, EventTrigger.Entry entry)
     {
         EventTrigger trigger = GetTrigger(go);
         trigger.triggers.Remove(entry);
+    }
+
+    public static void RemoveEventAllEntries(this UnityEngine.GameObject go)
+    {
+        EventTrigger trigger = GetTrigger(go);
+        trigger.triggers.Clear();
     }
 
     public static EventTrigger.Entry AddOnPointerClick(this UnityEngine.GameObject go,
