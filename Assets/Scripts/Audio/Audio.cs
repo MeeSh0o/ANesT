@@ -34,7 +34,18 @@ public class Audio : MonoBehaviour
             BGM[i].gameObject.name = "chanel" + (i + 1);
         }
     }
-
+    /// <summary>
+    /// 播放BGM，音乐会一直循环播放
+    /// </summary>
+    /// <param name="fileName">音频文件名</param>
+    public void PlayMusic(string fileName)
+    {
+        AudioClip clip = GetAudioClip(fileName);
+        if (clip != null)
+        {
+            BGM[1].Play(clip);
+        }
+    }
 
     /// <summary>
     /// 播放BGM，相同轨道的bgm互斥，音乐会一直循环播放
