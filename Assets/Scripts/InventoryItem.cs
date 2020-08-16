@@ -32,6 +32,14 @@ public class InventoryItem : MonoBehaviour
 
     private void OnClick(BaseEventData arg0)
     {
+        var e = arg0 as PointerEventData;
+        if (e.clickCount >= 2)
+        {
+            //双击
+            ShowDetailFrame.Instance.ShowImage(iconImage.sprite, null);
+            return;
+        }
+
         isSelected = !isSelected;
     }
 
