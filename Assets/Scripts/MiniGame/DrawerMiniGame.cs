@@ -37,8 +37,8 @@ public class DrawerMiniGame : MiniGame
             numbers[i] = toggle;
             var num = i;
             toggle.onValueChanged.AddListener((v) => HandleNumber(v, num, toggle));
+           
         }
-
         closeGo.AddOnPointerClick((e) =>
         {
             Hide();
@@ -48,6 +48,11 @@ public class DrawerMiniGame : MiniGame
     public override MiniGame Init(CloseUpView view)
     {
         this.view = view;
+        bool[] on = new[] { true, true, false, true, true, true, false };
+        for (int i = 1; i <= 6; i++)
+        {
+            numbers[i].isOn = on[i];
+        }
         return this;
     }
 

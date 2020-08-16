@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -166,7 +166,7 @@ MonoBehaviour:
     - {fileID: 8180846042048720993}
     - {fileID: 6122168161885486238}
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -179,6 +179,27 @@ MonoBehaviour:
           argument:
             supportedType: 2
             stringArgument: 
+            intArgument: 1
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 4481172680664668276}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Kongling1
             intArgument: 1
             floatArgument: 0
             boolArgument: 0
@@ -1119,7 +1140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &298656825
 Transform:
   m_ObjectHideFlags: 0
@@ -3643,7 +3664,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 113
+      inspectorListHeight: 138
       persistentCalls:
         calls:
         - genericMenuData:
@@ -3698,6 +3719,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 4481172680664668276}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -5517,6 +5559,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1649351353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4481172682484777401, guid: 9288d12986c7be9418e3ddf30b572ee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4481172680664668275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1649351354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649351353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 3fad8e049982e424e9ea1f8a0aeef07a, type: 2}
 --- !u!1 &1698181800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6389,6 +6454,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6596359684146018398, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6596359684159878865, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: m_IsActive
@@ -6398,6 +6468,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
@@ -6429,6 +6504,122 @@ PrefabInstance:
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].genericMenuData.selectedMember
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
+      value: Game Key Menu button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626228, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a952933a9c861e940bb43d21135e8cfc,
+        type: 3}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].argument.boolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].argument.stringArgument
+      value: Kongling2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684462626233, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].target
@@ -6439,6 +6630,61 @@ PrefabInstance:
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[3].target
       value: 
       objectReference: {fileID: 60936693}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.stringArgument
+      value: Kongling2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.boolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].target
@@ -6449,6 +6695,206 @@ PrefabInstance:
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[3].target
       value: 
       objectReference: {fileID: 1440580060}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.stringArgument
+      value: Kongling2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.boolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
+      value: Game Key Menu button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
+      value: Game Key Menu button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
+      value: Game Key Menu button
+      objectReference: {fileID: 0}
     - target: {fileID: 6596359685697614638, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6512,7 +6958,12 @@ PrefabInstance:
     - target: {fileID: 6596359685697614639, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
@@ -6524,6 +6975,106 @@ PrefabInstance:
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[3].target
       value: 
       objectReference: {fileID: 1440580060}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.stringArgument
+      value: Kongling2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.boolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
+      value: Game Key Menu button
+      objectReference: {fileID: 0}
     - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
@@ -6578,6 +7129,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
+      value: 
+      objectReference: {fileID: 4481172680664668276}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
+      value: PlaySFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
+        type: 3}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
+      value: Game Key Menu button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a0d5616da469c4f9732a497a47d701, type: 3}
@@ -6690,7 +7291,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -6703,6 +7304,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 4481172680664668276}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -7754,7 +8376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2536424644699065024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8431,29 +9053,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4481172682484777379, guid: 9288d12986c7be9418e3ddf30b572ee1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9288d12986c7be9418e3ddf30b572ee1, type: 3}
---- !u!1 &4481172680664668276 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4481172682484777401, guid: 9288d12986c7be9418e3ddf30b572ee1,
+--- !u!114 &4481172680664668276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4481172682484777404, guid: 9288d12986c7be9418e3ddf30b572ee1,
     type: 3}
   m_PrefabInstance: {fileID: 4481172680664668275}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4481172680664668277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4481172680664668276}
+  m_GameObject: {fileID: 1649351353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Script: {fileID: 11500000, guid: e857dfb82367ed24f89afeb240dc9ab2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 3fad8e049982e424e9ea1f8a0aeef07a, type: 2}
 --- !u!4 &4540766747897981503
 Transform:
   m_ObjectHideFlags: 0
@@ -10537,7 +11148,7 @@ MonoBehaviour:
     TriggerListeners:
     - {fileID: 7557745947144841985}
     OnSuccessTrigger:
-      inspectorListHeight: 113
+      inspectorListHeight: 138
       persistentCalls:
         calls:
         - genericMenuData:
@@ -10592,6 +11203,27 @@ MonoBehaviour:
           argument:
             supportedType: 1
             stringArgument: "\u5F26"
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 4481172680664668276}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Kongling2
             intArgument: 0
             floatArgument: 0
             boolArgument: 1
@@ -10875,7 +11507,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -10888,6 +11520,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 4481172680664668276}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
