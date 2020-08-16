@@ -5,36 +5,16 @@ using UnityEngine.UI;
 
 public class CloseUpView : MonoBehaviour
 {
-    // private Dictionary<string, MiniGame> miniGames = new Dictionary<string, MiniGame>();
-
-    // Start is called before the first frame update
-    public Image viewImage;
-
     private void Start()
     {
         var games = GetComponentsInChildren<MiniGame>();
         foreach (var miniGame in games)
         {
             miniGame.Init(this);
+            miniGame.gameObject.SetActive(false);
         }
 
         Instance = this;
-        Hide();
-    }
-
-    public void Show(Sprite sprite = null)
-    {
-        gameObject.SetActive(true);
-        if (sprite)
-        {
-            viewImage.sprite = sprite;
-            viewImage.SetNativeSize();
-        }
-    }
-
-    public void Hide()
-    {
-        gameObject.SetActive(false);
     }
 
     public void OpenMiniGame(string name)
@@ -44,7 +24,6 @@ public class CloseUpView : MonoBehaviour
         {
             if (miniGame.GameName == name)
             {
-                Show();
                 miniGame.Show();
                 break;
             }

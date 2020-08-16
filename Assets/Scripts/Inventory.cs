@@ -74,6 +74,19 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void RemoveItem(string itemName)
+    {
+        var inventoryItem = items.Find((item) => item.nameText.text == itemName);
+        if (inventoryItem != null)
+        {
+            items.Remove(inventoryItem);
+            if (inventoryItem.gameObject != null)
+            {
+                Destroy(inventoryItem.gameObject);
+            }
+        }
+    }
+
     public List<Item> GetSelectedItems()
     {
         return items.Where(i => i.isSelected).Select(i => i.rawItem).ToList();
