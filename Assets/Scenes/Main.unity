@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3287,6 +3287,13 @@ MonoBehaviour:
   level: 0
   flags: []
   LevelFlags: []
+  levels:
+  - events: {fileID: 7557745945696348461}
+    objects: {fileID: 7557745945696348463}
+    flags: []
+  - events: {fileID: 7557745945696348460}
+    objects: {fileID: 7557745945696348462}
+    flags: []
 --- !u!1 &2119241225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,3 +3702,27 @@ PrefabInstance:
     - {fileID: 1551039083, guid: ed30c612c2a3d1240ad6c314fe212114, type: 3}
     - {fileID: 880554337, guid: ed30c612c2a3d1240ad6c314fe212114, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ed30c612c2a3d1240ad6c314fe212114, type: 3}
+--- !u!1 &7557745945696348460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5463342589026804628, guid: ed30c612c2a3d1240ad6c314fe212114,
+    type: 3}
+  m_PrefabInstance: {fileID: 7557745945696348459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7557745945696348461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7557745946720427153, guid: ed30c612c2a3d1240ad6c314fe212114,
+    type: 3}
+  m_PrefabInstance: {fileID: 7557745945696348459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7557745945696348462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5578867847609316507, guid: ed30c612c2a3d1240ad6c314fe212114,
+    type: 3}
+  m_PrefabInstance: {fileID: 7557745945696348459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7557745945696348463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6307369117150141151, guid: ed30c612c2a3d1240ad6c314fe212114,
+    type: 3}
+  m_PrefabInstance: {fileID: 7557745945696348459}
+  m_PrefabAsset: {fileID: 0}

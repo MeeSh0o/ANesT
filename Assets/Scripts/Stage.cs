@@ -5,44 +5,37 @@ using UnityEngine;
 
 public class Stage : MonoBehaviour
 {
-    public int level = 0;
     public List<string> flags = new List<string>();
-    public string[] LevelFlags;
+    public Level[] levels;
     public static Stage Instance { get; private set; }
-
-    /// <summary>
-    /// 集齐所有flag算通关
-    /// </summary>
-    public static string[] Level1 = new string[]
-    {
-        "一幅油画",
-        "抽屉小游戏.完成",
-    };
 
     private void Awake()
     {
         Instance = this;
-        LoadLevel(1);
+        LoadLevel(0);
     }
 
     /// <summary>
     /// 加载关卡
     /// </summary>
-    /// <param name="level"></param>
-    public void LoadLevel(int level)
+    /// <param name="index"></param>
+    public void LoadLevel(int index)
     {
-        this.level = level;
-        switch (level)
+        for (int i = 0; i < this.levels.Length; i++)
         {
-            case 1:
-                LevelFlags = Level1;
-                break;
+            var l = levels[i];
+            l.events.SetActive(i == index);
+            l.objects.SetActive(i == index);
         }
+
+        flags.Clear();
+        Inventory.Instance.Clear();
     }
 
     public bool IsMissionComplete()
     {
-        return LevelFlags.All(f => flags.Contains(f));
+        //return LevelFlags.All(f => flags.Contains(f));
+        return false;
     }
 
     public void AddFlag(string flag)
@@ -57,7 +50,11 @@ public class Stage : MonoBehaviour
         switch (flag)
         {
             case "对话.第一关完成":
-                Narratage.Instance.ShowMessage("第一关完成", () => { Debug.Log("加载第二关"); }, 0.05f, false);
+                Narratage.Instance.ShowMessage("第一关完成", () =>
+                {
+                    Narratage.Instance.Hide();
+                    LoadLevel(1);
+                }, 0.05f, false);
                 break;
         }
     }
