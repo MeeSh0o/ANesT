@@ -7,7 +7,7 @@ public class Level5 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Audio.instance.PlayMusic("MainThemeMIHUAN");
+        Audio.instance.PlayMusic("MainTheme");
     }
 
     // Update is called once per frame
