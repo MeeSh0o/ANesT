@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1769,17 +1769,6 @@ MonoBehaviour:
   onComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 564685442}
-        m_MethodName: DORewindAndPlayNext
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 564685440}
         m_MethodName: SetActive
         m_Mode: 6
@@ -1792,7 +1781,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   delay: 0
-  duration: 3
+  duration: 5
   easeType: 6
   easeCurve:
     serializedVersion: 2
@@ -1829,7 +1818,7 @@ MonoBehaviour:
   isValid: 1
   target: {fileID: 564685443}
   animationType: 7
-  autoPlay: 1
+  autoPlay: 0
   endValueFloat: 1
   endValueV3: {x: 0, y: 0, z: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -7057,7 +7046,7 @@ MonoBehaviour:
     flags: []
   currentLevel: 0
   OnChange:
-    inspectorListHeight: 63
+    inspectorListHeight: 88
     persistentCalls:
       calls:
       - genericMenuData:
@@ -7069,6 +7058,27 @@ MonoBehaviour:
         memberType: 8
         argument:
           supportedType: 4
+          stringArgument: 
+          intArgument: 0
+          floatArgument: 0
+          boolArgument: 1
+          colorArgument: {r: 0, g: 0, b: 0, a: 0}
+          vector2Argument: {x: 0, y: 0}
+          vector3Argument: {x: 0, y: 0, z: 0}
+          objectArgument: {fileID: 0}
+          gameObjectArgument: {fileID: 0}
+          transformArgument: {fileID: 0}
+        isDynamic: 0
+        isCallEnabled: 1
+      - genericMenuData:
+          selectedComponent: 4
+          selectedMember: 46
+          isDynamic: 0
+        target: {fileID: 564685442}
+        memberName: DORewindAndPlayNext
+        memberType: 8
+        argument:
+          supportedType: 0
           stringArgument: 
           intArgument: 0
           floatArgument: 0
@@ -8358,6 +8368,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 4481172682484777405, guid: 9288d12986c7be9418e3ddf30b572ee1,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8416,6 +8431,29 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4481172682484777379, guid: 9288d12986c7be9418e3ddf30b572ee1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9288d12986c7be9418e3ddf30b572ee1, type: 3}
+--- !u!1 &4481172680664668276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4481172682484777401, guid: 9288d12986c7be9418e3ddf30b572ee1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4481172680664668275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4481172680664668277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481172680664668276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 3fad8e049982e424e9ea1f8a0aeef07a, type: 2}
 --- !u!4 &4540766747897981503
 Transform:
   m_ObjectHideFlags: 0
