@@ -2203,8 +2203,8 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
+  m_PointLightInnerAngle: 30
+  m_PointLightOuterAngle: 149
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 15.8
   m_PointLightDistance: 3
@@ -2226,13 +2226,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820833300}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.73, y: 0.53, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.9943856, w: -0.10581731}
+  m_LocalPosition: {x: 43.67, y: 4.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1017406201}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -192.14899}
 --- !u!95 &820833303
 Animator:
   serializedVersion: 3
@@ -2243,7 +2243,7 @@ Animator:
   m_GameObject: {fileID: 820833300}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 554bea8c23b7a8e4498042138dcc9fc5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2a28ee41bbb7beb4aa150543092b9ccc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
