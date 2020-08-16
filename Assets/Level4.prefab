@@ -109,19 +109,40 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
             selectedComponent: 0
             selectedMember: 7
             isDynamic: 0
-          target: {fileID: 6596359685946846095}
+          target: {fileID: 0}
           memberName: SetActive
           memberType: 8
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Scare
             intArgument: 0
             floatArgument: 0
             boolArgument: 1
@@ -178,7 +199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6596359684159878864
 Transform:
   m_ObjectHideFlags: 0
@@ -250,7 +271,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6596359684159878865}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -429,19 +450,40 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
-            selectedComponent: -1
-            selectedMember: 0
+            selectedComponent: 0
+            selectedMember: 7
+            isDynamic: 0
+          target: {fileID: 6596359684257637129}
+          memberName: SetActive
+          memberType: 8
+          argument:
+            supportedType: 4
+            stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
             isDynamic: 0
           target: {fileID: 0}
-          memberName: 
-          memberType: 0
+          memberName: PlaySFX
+          memberType: 8
           argument:
-            supportedType: 0
-            stringArgument: 
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -553,7 +595,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cc568328f06365b49aacb9df71a61be9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a952933a9c861e940bb43d21135e8cfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.6039216}
   m_FlipX: 0
   m_FlipY: 0
@@ -591,7 +633,7 @@ MonoBehaviour:
     TriggerListeners:
     - {fileID: 6596359684462626234}
     OnSuccessTrigger:
-      inspectorListHeight: 88
+      inspectorListHeight: 113
       persistentCalls:
         calls:
         - genericMenuData:
@@ -625,6 +667,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Kongling2
             intArgument: 0
             floatArgument: 0
             boolArgument: 1
@@ -872,7 +935,7 @@ MonoBehaviour:
     TriggerListeners:
     - {fileID: 6596359684635292061}
     OnSuccessTrigger:
-      inspectorListHeight: 138
+      inspectorListHeight: 163
       persistentCalls:
         calls:
         - genericMenuData:
@@ -948,6 +1011,27 @@ MonoBehaviour:
           argument:
             supportedType: 1
             stringArgument: "\u5409\u4ED6"
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Kongling2
             intArgument: 0
             floatArgument: 0
             boolArgument: 1
@@ -1111,7 +1195,7 @@ MonoBehaviour:
     TriggerListeners:
     - {fileID: 6596359684847876153}
     OnSuccessTrigger:
-      inspectorListHeight: 138
+      inspectorListHeight: 163
       persistentCalls:
         calls:
         - genericMenuData:
@@ -1165,7 +1249,7 @@ MonoBehaviour:
           memberType: 8
           argument:
             supportedType: 1
-            stringArgument: "\u76C6\u683D"
+            stringArgument: "\u7EA2\u84DD\u836F\u4E38"
             intArgument: 0
             floatArgument: 0
             boolArgument: 1
@@ -1198,6 +1282,27 @@ MonoBehaviour:
             transformArgument: {fileID: 0}
           isDynamic: 0
           isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Kongling2
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
   DetailSprite: {fileID: 21300000, guid: 10fb20f48ce3a764d93b5f6ab6c76dda, type: 3}
 --- !u!114 &6596359684847876153
 MonoBehaviour:
@@ -1212,7 +1317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NeedUseItems:
-  - "\u76C6\u683D"
+  - "\u7EA2\u84DD\u836F\u4E38"
 --- !u!61 &6596359684847876154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1266,7 +1371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6596359685052829833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.36, y: 1.56, z: 101.40723}
+  m_LocalPosition: {x: -47.32, y: -0.63, z: 101.40723}
   m_LocalScale: {x: 0.39818, y: 0.39818, z: 0.39818}
   m_Children: []
   m_Father: {fileID: 6596359685697614638}
@@ -1374,7 +1479,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -1387,6 +1492,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -1508,7 +1634,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -1521,6 +1647,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -1668,7 +1815,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -1681,6 +1828,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -1748,7 +1916,6 @@ Transform:
   m_Children:
   - {fileID: 6596359684462626232}
   - {fileID: 6596359684146018393}
-  - {fileID: 6596359685946846094}
   m_Father: {fileID: 6596359685697614638}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1761,6 +1928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6596359685697614638}
+  - component: {fileID: 798100624}
   m_Layer: 0
   m_Name: Level4
   m_TagString: Untagged
@@ -1794,6 +1962,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &798100624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6596359685697614639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1842efbb5bc4ade48ac739174320c930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6596359685816306676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +2085,7 @@ MonoBehaviour:
     TriggerListeners:
     - {fileID: 6596359685816306678}
     OnSuccessTrigger:
-      inspectorListHeight: 138
+      inspectorListHeight: 163
       persistentCalls:
         calls:
         - genericMenuData:
@@ -1981,6 +2161,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: "\u773C\u775B"
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Kongling2
             intArgument: 0
             floatArgument: 0
             boolArgument: 1
@@ -2168,7 +2369,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -2192,129 +2393,16 @@ MonoBehaviour:
             transformArgument: {fileID: 0}
           isDynamic: 0
           isCallEnabled: 1
-  DetailSprite: {fileID: 21300000, guid: eb0e2b013388cd24c93d9bb90dd30baa, type: 3}
---- !u!1 &6596359685946846095
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6596359685946846094}
-  - component: {fileID: 6596359685946846091}
-  - component: {fileID: 6596359685946846088}
-  - component: {fileID: 6596359685946846089}
-  m_Layer: 0
-  m_Name: Character
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6596359685946846094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6596359685946846095}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.9, y: -2.6, z: 0}
-  m_LocalScale: {x: 15.273544, y: 15.273544, z: 15.273544}
-  m_Children: []
-  m_Father: {fileID: 6596359685493194773}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6596359685946846091
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6596359685946846095}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 176df0aecbc014a49b43a45d86b6f39d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.88, y: 5.69}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &6596359685946846088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6596359685946846095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f11db5de3fe9dd46a55647b948cc58a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item:
-    name: 
-    sprite: {fileID: 0}
-    desc: 
-  girlBalloon: {fileID: 0}
-  triggers:
-  - triggerType: 0
-    triggerTimes: -1
-    triggerTarget: 
-    flag: 
-    NeedFlags: []
-    WithOutFlags: []
-    TriggerListeners: []
-    OnSuccessTrigger:
-      inspectorListHeight: 63
-      persistentCalls:
-        calls:
         - genericMenuData:
-            selectedComponent: -1
-            selectedMember: 0
+            selectedComponent: 5
+            selectedMember: 9
             isDynamic: 0
           target: {fileID: 0}
-          memberName: 
-          memberType: 0
+          memberName: PlaySFX
+          memberType: 8
           argument:
-            supportedType: 0
-            stringArgument: 
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -2326,33 +2414,7 @@ MonoBehaviour:
             transformArgument: {fileID: 0}
           isDynamic: 0
           isCallEnabled: 1
-  DetailSprite: {fileID: 0}
---- !u!61 &6596359685946846089
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6596359685946846095}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.88, y: 5.69}
-    newSize: {x: 1.88, y: 5.69}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.88, y: 5.69}
-  m_EdgeRadius: 0
+  DetailSprite: {fileID: 21300000, guid: eb0e2b013388cd24c93d9bb90dd30baa, type: 3}
 --- !u!1 &6596359685996287691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2428,7 @@ GameObject:
   - component: {fileID: 6596359685996287684}
   - component: {fileID: 6596359685996287685}
   m_Layer: 0
-  m_Name: Plant
+  m_Name: Medicine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2380,8 +2442,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6596359685996287691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.32, y: -1.12, z: 100}
-  m_LocalScale: {x: 0.39817998, y: 0.39817998, z: 0.39817998}
+  m_LocalPosition: {x: 6.75, y: -2.34, z: 100}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.39817998}
   m_Children: []
   m_Father: {fileID: 6596359685697614638}
   m_RootOrder: 10
@@ -2425,7 +2487,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: d8846a432966ccb44ab924cdf0227240, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b20d11c10eaf8c469e9552c5330bdff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2453,7 +2515,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.02, y: 9.94}
+    oldSize: {x: 11.72, y: 11.97}
     newSize: {x: 6.26, y: 10.09}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2475,8 +2537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    name: "\u76C6\u683D"
-    sprite: {fileID: 21300000, guid: d8846a432966ccb44ab924cdf0227240, type: 3}
+    name: "\u7EA2\u84DD\u836F\u4E38"
+    sprite: {fileID: 21300000, guid: 5b20d11c10eaf8c469e9552c5330bdff, type: 3}
     desc: 
   girlBalloon: {fileID: 0}
   triggers:
@@ -2488,7 +2550,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -2512,7 +2574,28 @@ MonoBehaviour:
             transformArgument: {fileID: 0}
           isDynamic: 0
           isCallEnabled: 1
-  DetailSprite: {fileID: 21300000, guid: d8846a432966ccb44ab924cdf0227240, type: 3}
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 0}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+  DetailSprite: {fileID: 21300000, guid: 5b20d11c10eaf8c469e9552c5330bdff, type: 3}
 --- !u!1 &6596359686088587971
 GameObject:
   m_ObjectHideFlags: 0

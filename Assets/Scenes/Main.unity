@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -166,7 +166,7 @@ MonoBehaviour:
     - {fileID: 8180846042048720993}
     - {fileID: 6122168161885486238}
     OnSuccessTrigger:
-      inspectorListHeight: 88
+      inspectorListHeight: 63
       persistentCalls:
         calls:
         - genericMenuData:
@@ -179,27 +179,6 @@ MonoBehaviour:
           argument:
             supportedType: 2
             stringArgument: 
-            intArgument: 1
-            floatArgument: 0
-            boolArgument: 0
-            colorArgument: {r: 0, g: 0, b: 0, a: 0}
-            vector2Argument: {x: 0, y: 0}
-            vector3Argument: {x: 0, y: 0, z: 0}
-            objectArgument: {fileID: 0}
-            gameObjectArgument: {fileID: 0}
-            transformArgument: {fileID: 0}
-          isDynamic: 0
-          isCallEnabled: 1
-        - genericMenuData:
-            selectedComponent: 5
-            selectedMember: 9
-            isDynamic: 0
-          target: {fileID: 4481172680664668276}
-          memberName: PlaySFX
-          memberType: 8
-          argument:
-            supportedType: 1
-            stringArgument: Kongling1
             intArgument: 1
             floatArgument: 0
             boolArgument: 0
@@ -884,6 +863,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7228158540707052477, guid: d324efefec5e7404ba4c5af14342d5a2,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.08235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228158540707052477, guid: d324efefec5e7404ba4c5af14342d5a2,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.08235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228158540707052477, guid: d324efefec5e7404ba4c5af14342d5a2,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.078431375
+      objectReference: {fileID: 0}
     - target: {fileID: 7228158540707052478, guid: d324efefec5e7404ba4c5af14342d5a2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -893,6 +887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228158540707052478, guid: d324efefec5e7404ba4c5af14342d5a2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6000061
       objectReference: {fileID: 0}
     - target: {fileID: 7228158540707052479, guid: d324efefec5e7404ba4c5af14342d5a2,
         type: 3}
@@ -1376,7 +1375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324.5, y: -9}
+  m_AnchoredPosition: {x: -297.1, y: -9}
   m_SizeDelta: {x: 47.09929, y: 468.09973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492423461
@@ -1421,7 +1420,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 492423462}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820547535}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Guitar_31
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &492423462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,7 +1969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 58, y: -9}
+  m_AnchoredPosition: {x: 77.89999, y: 0}
   m_SizeDelta: {x: 47.09929, y: 468.09973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &611277881
@@ -2004,7 +2014,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 611277882}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820547535}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Guitar_06
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &611277882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2042,12 +2063,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611277879}
   m_CullTransparentMesh: 0
---- !u!1 &628295966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6596359684257637129, guid: f9a0d5616da469c4f9732a497a47d701,
-    type: 3}
-  m_PrefabInstance: {fileID: 1969182542}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &631426155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,7 +2535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -246, y: -9}
+  m_AnchoredPosition: {x: -222.1, y: 0}
   m_SizeDelta: {x: 47.09929, y: 468.09973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855508635
@@ -2565,7 +2580,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 855508636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820547535}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Guitar_02
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &855508636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3734,7 +3760,7 @@ MonoBehaviour:
             selectedComponent: 5
             selectedMember: 9
             isDynamic: 0
-          target: {fileID: 4481172680664668276}
+          target: {fileID: 1820547535}
           memberName: PlaySFX
           memberType: 8
           argument:
@@ -5094,7 +5120,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: -9}
+  m_AnchoredPosition: {x: -72.10001, y: 0}
   m_SizeDelta: {x: 47.09929, y: 468.09973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492703380
@@ -5139,7 +5165,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1492703381}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820547535}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Guitar_04
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1492703381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5559,29 +5596,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1649351353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4481172682484777401, guid: 9288d12986c7be9418e3ddf30b572ee1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4481172680664668275}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1649351354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649351353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 3fad8e049982e424e9ea1f8a0aeef07a, type: 2}
 --- !u!1 &1698181800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5618,7 +5632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24, y: -9}
+  m_AnchoredPosition: {x: 2.8999882, y: 0}
   m_SizeDelta: {x: 47.09929, y: 468.09973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1698181802
@@ -5663,7 +5677,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1698181803}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820547535}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Guitar_05
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1698181803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5809,7 +5834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -185, y: -9}
+  m_AnchoredPosition: {x: -147.1, y: 0}
   m_SizeDelta: {x: 47.09929, y: 468.09973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760338068
@@ -5854,7 +5879,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1760338069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820547535}
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Guitar_03
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1760338069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6036,12 +6072,136 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!20 &1820547532 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 4481172682484777407, guid: 9288d12986c7be9418e3ddf30b572ee1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4481172680664668275}
+--- !u!1 &1820547530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820547533}
+  - component: {fileID: 1820547532}
+  - component: {fileID: 1820547531}
+  - component: {fileID: 1820547534}
+  - component: {fileID: 1820547535}
+  - component: {fileID: 4481172682313614025}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1820547531
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820547530}
+  m_Enabled: 1
+--- !u!20 &1820547532
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820547530}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 100
+  field of view: 60
+  orthographic: 1
+  orthographic size: 6
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1820547533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820547530}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.25, y: 0, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4326197786485047788}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1820547534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820547530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!114 &1820547535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820547530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e857dfb82367ed24f89afeb240dc9ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1836707753
 GameObject:
   m_ObjectHideFlags: 0
@@ -6454,172 +6614,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6596359684146018398, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684159878865, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684159878866, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+    - target: {fileID: 6596359684146018395, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].target
       value: 
-      objectReference: {fileID: 628295966}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
+      objectReference: {fileID: 4326197786485047789}
+    - target: {fileID: 6596359684146018395, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].memberName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].argument.supportedType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].genericMenuData.selectedComponent
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].genericMenuData.selectedMember
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
+      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
+      value: 
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684257637130, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
-      value: Game Key Menu button
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626228, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a952933a9c861e940bb43d21135e8cfc,
-        type: 3}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 113
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].argument.boolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626229, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].argument.stringArgument
-      value: Kongling2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684462626233, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 5
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].target
@@ -6632,59 +6646,9 @@ PrefabInstance:
       objectReference: {fileID: 60936693}
     - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 163
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.stringArgument
-      value: Kongling2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.boolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684635292060, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 5
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].target
@@ -6697,204 +6661,24 @@ PrefabInstance:
       objectReference: {fileID: 1440580060}
     - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 163
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.stringArgument
-      value: Kongling2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.boolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359684847876152, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685052829835, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
-      value: Game Key Menu button
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685095981111, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
-      value: Game Key Menu button
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685107367026, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
-      value: Game Key Menu button
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359685697614638, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6955,16 +6739,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level4
       objectReference: {fileID: 0}
-    - target: {fileID: 6596359685697614639, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[2].target
@@ -6977,209 +6751,19 @@ PrefabInstance:
       objectReference: {fileID: 1440580060}
     - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 163
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.stringArgument
-      value: Kongling2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].argument.boolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685816306673, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[4].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685834201091, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
-      value: Game Key Menu button
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 63
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].target
-      value: 
-      objectReference: {fileID: 1872420465}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].memberName
-      value: LastBackGround
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].argument.supportedType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].genericMenuData.selectedComponent
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846088, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[0].genericMenuData.selectedMember
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685946846095, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.inspectorListHeight
-      value: 88
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedMember
-      value: 9
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
         type: 3}
       propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].target
       value: 
-      objectReference: {fileID: 4481172680664668276}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberName
-      value: PlaySFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].memberType
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.supportedType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].isCallEnabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].genericMenuData.selectedComponent
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6596359685996287685, guid: f9a0d5616da469c4f9732a497a47d701,
-        type: 3}
-      propertyPath: triggers.Array.data[0].OnSuccessTrigger.persistentCalls.calls.Array.data[1].argument.stringArgument
-      value: Game Key Menu button
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1820547535}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a0d5616da469c4f9732a497a47d701, type: 3}
 --- !u!1 &1974501543
@@ -7319,7 +6903,7 @@ MonoBehaviour:
             selectedComponent: 5
             selectedMember: 9
             isDynamic: 0
-          target: {fileID: 4481172680664668276}
+          target: {fileID: 1820547535}
           memberName: PlaySFX
           memberType: 8
           argument:
@@ -8564,7 +8148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7056085160115594493}
   m_LocalRotation: {x: -0, y: -0, z: -0.38078183, w: 0.9246649}
-  m_LocalPosition: {x: 36.64, y: -4.31, z: 0}
+  m_LocalPosition: {x: 37.88, y: -4.31, z: 0}
   m_LocalScale: {x: 0.07219658, y: 0.07219658, z: 0.07219658}
   m_Children: []
   m_Father: {fileID: 9170956766418414674}
@@ -8961,6 +8545,166 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &4326197786485047785
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326197786485047789}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: 176df0aecbc014a49b43a45d86b6f39d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.88, y: 5.69}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &4326197786485047786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326197786485047789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f11db5de3fe9dd46a55647b948cc58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item:
+    name: 
+    sprite: {fileID: 0}
+    desc: 
+  girlBalloon: {fileID: 0}
+  triggers:
+  - triggerType: 0
+    triggerTimes: -1
+    triggerTarget: 
+    flag: 
+    NeedFlags: []
+    WithOutFlags: []
+    TriggerListeners: []
+    OnSuccessTrigger:
+      inspectorListHeight: 63
+      persistentCalls:
+        calls:
+        - genericMenuData:
+            selectedComponent: 2
+            selectedMember: 8
+            isDynamic: 0
+          target: {fileID: 1872420465}
+          memberName: LastBackGround
+          memberType: 8
+          argument:
+            supportedType: 0
+            stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+  DetailSprite: {fileID: 0}
+--- !u!61 &4326197786485047787
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326197786485047789}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.88, y: 5.69}
+    newSize: {x: 1.88, y: 5.69}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.88, y: 5.69}
+  m_EdgeRadius: 0
+--- !u!4 &4326197786485047788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326197786485047789}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.04, y: -5.32, z: 2}
+  m_LocalScale: {x: 3.8371725, y: 3.8371725, z: 3.8371725}
+  m_Children: []
+  m_Father: {fileID: 1820547533}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4326197786485047789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4326197786485047788}
+  - component: {fileID: 4326197786485047785}
+  - component: {fileID: 4326197786485047786}
+  - component: {fileID: 4326197786485047787}
+  m_Layer: 0
+  m_Name: Character
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &4441255203108594244
 GameObject:
   m_ObjectHideFlags: 0
@@ -8978,93 +8722,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &4481172680664668275
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4481172682484777401, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_Name
-      value: Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777405, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4481172682484777406, guid: 9288d12986c7be9418e3ddf30b572ee1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4481172682484777379, guid: 9288d12986c7be9418e3ddf30b572ee1, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 9288d12986c7be9418e3ddf30b572ee1, type: 3}
---- !u!114 &4481172680664668276 stripped
+--- !u!114 &4481172682313614025
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4481172682484777404, guid: 9288d12986c7be9418e3ddf30b572ee1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4481172680664668275}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1649351353}
+  m_GameObject: {fileID: 1820547530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e857dfb82367ed24f89afeb240dc9ab2, type: 3}
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 3fad8e049982e424e9ea1f8a0aeef07a, type: 2}
 --- !u!4 &4540766747897981503
 Transform:
   m_ObjectHideFlags: 0
@@ -9277,7 +8951,7 @@ MonoBehaviour:
     TriggerListeners:
     - {fileID: 2884304561203468182}
     OnSuccessTrigger:
-      inspectorListHeight: 88
+      inspectorListHeight: 138
       persistentCalls:
         calls:
         - genericMenuData:
@@ -9311,6 +8985,48 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 1820547535}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Kongling2
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 1
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 2
+            selectedMember: 12
+            isDynamic: 0
+          target: {fileID: 60936693}
+          memberName: RemoveItem
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: "\u4E00\u5757\u82F9\u679C"
             intArgument: 0
             floatArgument: 0
             boolArgument: 1
@@ -9534,7 +9250,7 @@ MonoBehaviour:
     WithOutFlags: []
     TriggerListeners: []
     OnSuccessTrigger:
-      inspectorListHeight: 63
+      inspectorListHeight: 88
       persistentCalls:
         calls:
         - genericMenuData:
@@ -9547,6 +9263,27 @@ MonoBehaviour:
           argument:
             supportedType: 4
             stringArgument: 
+            intArgument: 0
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 9
+            isDynamic: 0
+          target: {fileID: 1820547535}
+          memberName: PlaySFX
+          memberType: 8
+          argument:
+            supportedType: 1
+            stringArgument: Game Key Menu button
             intArgument: 0
             floatArgument: 0
             boolArgument: 0
@@ -11218,7 +10955,7 @@ MonoBehaviour:
             selectedComponent: 5
             selectedMember: 9
             isDynamic: 0
-          target: {fileID: 4481172680664668276}
+          target: {fileID: 1820547535}
           memberName: PlaySFX
           memberType: 8
           argument:
@@ -11313,7 +11050,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 476ce8137de5b1c44b731a385cac343f, type: 3}
       desc: 
     - name: "\u4E00\u5757\u82F9\u679C"
-      sprite: {fileID: 21300000, guid: b3c887398b2799f4fad0f41bffeb10e9, type: 3}
+      sprite: {fileID: 21300000, guid: bdc88f1f40f457848889bdd6ec5b3abd, type: 3}
       desc: 
     - name: "\u8815\u866B"
       sprite: {fileID: 21300000, guid: 651a33082766ed444be070ca2efcdca6, type: 3}
@@ -11326,8 +11063,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 476ce8137de5b1c44b731a385cac343f, type: 3}
       desc: 
     - name: "\u5F26"
-      sprite: {fileID: 5950726287973732982, guid: 424647b84b79b3a41b1be654de0db3fa,
-        type: 3}
+      sprite: {fileID: 21300000, guid: 59cf8c0d5aaff3c4b8ebb775526a7530, type: 3}
       desc: 
 --- !u!1 &7641765605989445195
 GameObject:
@@ -11535,7 +11271,7 @@ MonoBehaviour:
             selectedComponent: 5
             selectedMember: 9
             isDynamic: 0
-          target: {fileID: 4481172680664668276}
+          target: {fileID: 1820547535}
           memberName: PlaySFX
           memberType: 8
           argument:
