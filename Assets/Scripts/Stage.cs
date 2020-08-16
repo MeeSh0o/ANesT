@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ByteSheep.Events;
 using UnityEngine;
 
 public class Stage : MonoBehaviour
@@ -9,6 +10,8 @@ public class Stage : MonoBehaviour
     public Level[] levels;
     public static Stage Instance { get; private set; }
     public int currentLevel = 0;
+
+    public QuickEvent OnChange;
 
     private void Awake()
     {
@@ -31,6 +34,7 @@ public class Stage : MonoBehaviour
 
         flags.Clear();
         Inventory.Instance.Clear();
+        OnChange?.Invoke();
     }
 
     public bool IsMissionComplete()
