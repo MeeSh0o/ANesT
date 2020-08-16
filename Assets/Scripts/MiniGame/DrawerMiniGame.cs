@@ -22,13 +22,12 @@ public class DrawerMiniGame : MiniGame
     {
         //下标都从1开始
         highlights.Add(new[] { 0 });
-
+        highlights.Add(new[] { 2, 4 });
         highlights.Add(new[] { 1, 3, 5 });
-        highlights.Add(new[] { 2, 3, 5 });
-        highlights.Add(new[] { 3, 4, 5 });
-        highlights.Add(new[] { 2, 3, 5, 6 });
-        highlights.Add(new[] { 1, 3, 4, 5 });
-        highlights.Add(new[] { 1, 2, 4, 6 });
+        highlights.Add(new[] { 2, 6 });
+        highlights.Add(new[] { 1, 5 });
+        highlights.Add(new[] { 2, 4, 6 });
+        highlights.Add(new[] { 3, 5 });
         for (int i = 1; i <= 6; i++)
         {
             var go = Instantiate(numberPrefab, layout.transform);
@@ -66,18 +65,13 @@ public class DrawerMiniGame : MiniGame
 
         broadCast = true;
 
-        if (value)
+        //if (value)
         {
             foreach (int n in highlights[num])
             {
-                if (n == num)
-                {
-                    continue;
-                }
-
-                // numbers[n].isOn = !numbers[n].isOn;
+                numbers[n].isOn = !numbers[n].isOn;
                 //不取反
-                numbers[n].isOn = true;
+                //numbers[n].isOn = true;
             }
         }
 
