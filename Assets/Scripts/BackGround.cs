@@ -17,4 +17,52 @@ public class BackGround : MonoBehaviour
     {
 
     }
+
+    public void TurnRight()
+    {
+        switch (currentScene)
+        {
+            case 0:
+                SetCurrentScene(3);
+                break;
+            case 1:
+                SetCurrentScene(2);
+                break;
+            case 2:
+                SetCurrentScene(0);
+                break;
+            case 3:
+                SetCurrentScene(1);
+                break;
+        }
+    }
+
+    public void TurnLeft()
+    {
+        switch (currentScene)
+        {
+            case 0:
+                SetCurrentScene(2);
+                break;
+            case 1:
+                SetCurrentScene(3);
+                break;
+            case 2:
+                SetCurrentScene(1);
+                break;
+            case 3:
+                SetCurrentScene(0);
+                break;
+        }
+    }
+
+    
 }
+
+
+/*
+ * 0 wall
+ * 1 empty
+ * 2 window
+ * 3 door
+ */
