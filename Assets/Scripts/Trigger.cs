@@ -69,7 +69,7 @@ public class Trigger
                 switch (triggerTarget)
                 {
                     case "对话.一幅彩色的画":
-                        item.girlBalloon.ShowMessage("一幅彩色的画");
+                        item.girlBalloon?.ShowMessage("一幅彩色的画");
                         break;
                 }
 
