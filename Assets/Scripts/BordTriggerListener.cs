@@ -7,11 +7,6 @@ public class BordTriggerListener : TriggerListener
 
     public override bool OnTrigger(Trigger trigger)
     {
-        if (paint.NextPicture())
-        {
-            Stage.Instance.AddFlag("完成上色");
-        }
-
-        return false;
+        return paint.NextPicture();
     }
 }

@@ -168,7 +168,28 @@ MonoBehaviour:
     OnSuccessTrigger:
       inspectorListHeight: 63
       persistentCalls:
-        calls: []
+        calls:
+        - genericMenuData:
+            selectedComponent: 5
+            selectedMember: 10
+            isDynamic: 0
+          target: {fileID: 1999477454}
+          memberName: LoadLevel
+          memberType: 8
+          argument:
+            supportedType: 2
+            stringArgument: 
+            intArgument: 1
+            floatArgument: 0
+            boolArgument: 0
+            colorArgument: {r: 0, g: 0, b: 0, a: 0}
+            vector2Argument: {x: 0, y: 0}
+            vector3Argument: {x: 0, y: 0, z: 0}
+            objectArgument: {fileID: 0}
+            gameObjectArgument: {fileID: 0}
+            transformArgument: {fileID: 0}
+          isDynamic: 0
+          isCallEnabled: 1
   DetailSprite: {fileID: 0}
 --- !u!1 &17315010
 GameObject:
@@ -1098,7 +1119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &298656825
 Transform:
   m_ObjectHideFlags: 0
@@ -7723,7 +7744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2536424644699065024
 MonoBehaviour:
   m_ObjectHideFlags: 0
