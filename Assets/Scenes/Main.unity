@@ -2201,6 +2201,7 @@ MonoBehaviour:
   - {x: -20, y: 0, z: -100}
   - {x: 20, y: 0, z: -100}
   currentScene: 0
+  camera: {fileID: 1820547532}
 --- !u!1 &1046814099
 GameObject:
   m_ObjectHideFlags: 0
