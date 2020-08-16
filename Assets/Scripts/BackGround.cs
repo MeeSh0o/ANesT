@@ -7,15 +7,17 @@ public class BackGround : MonoBehaviour
     public GameObject[] picture = new GameObject[4];
     public Vector3[] cameraPos = new Vector3[4];
     public int currentScene;
+    public Camera camera;
 
     private void Awake()
     {
-        
+        camera.transform.position = cameraPos[currentScene];
     }
 
     public void SetCurrentScene(int scene)
     {
-
+        currentScene = scene;
+        camera.transform.position = cameraPos[currentScene];
     }
 
     public void TurnRight()
