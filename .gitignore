@@ -59,3 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 .idea
+/Assets/Resources/Audio/MainThemeMIHUAN.flp
+/Assets/Resources/Audio/MainThemeMIHUAN.flp.meta
+/Assets/Resources/Audio/WaterDrippingintoCup.mp3
+/Assets/Resources/Audio/WaterDrippingintoCup.mp3.meta
