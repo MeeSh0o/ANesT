@@ -9,7 +9,7 @@ public class Trigger
 {
     public TriggerType triggerType = TriggerType.None;
     [NonSerialized] public int currentTriggerTimes = 0;
-    [Header("表示可以触发多少次,负数为无限次")] public int triggerTimes = 1;
+    [Header("表示可以触发多少次,负数为无限次")] public int triggerTimes = -1;
     [Header("触发目标,对话/打开对象")] public string triggerTarget;
     [Header("游戏中的flag,收集完成即可过关")] public string flag;
     [Header("需要对应的flag")] public string[] NeedFlags = new string[] { };
