@@ -8,11 +8,12 @@ public class Stage : MonoBehaviour
     public List<string> flags = new List<string>();
     public Level[] levels;
     public static Stage Instance { get; private set; }
+    public int currentLevel = 0;
 
     private void Awake()
     {
         Instance = this;
-        LoadLevel(0);
+        LoadLevel(currentLevel);
     }
 
     /// <summary>
